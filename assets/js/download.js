@@ -6,8 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnText = document.getElementById('btnText');
     const btnLoader = document.getElementById('btnLoader');
 
-    // n8n webhook URL - Replace this with your actual n8n webhook URL
-    const N8N_WEBHOOK_URL = 'https://your-n8n-instance.com/webhook/devops-curriculum';
+    // n8n webhook configuration - injected from GitHub Secrets during deployment
+    // No fallback values for security - requires n8n-config.js to be loaded
+    const N8N_WEBHOOK_URL = window.N8N_CONFIG?.webhookUrl;
+    const N8N_USERNAME = window.N8N_CONFIG?.username;
+    const N8N_PASSWORD = window.N8N_CONFIG?.password;
     
     if (downloadForm) {
         downloadForm.addEventListener('submit', async (e) => {
@@ -39,10 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
             hideMessage();
 
             try {
-                // Send data to n8n webhook
+                // Create Basic Auth header
+                const credentials = btoa(`${N8N_USERNAME}:${N8N_PASSWORD}`);
+                
+                // Send data to n8n webhook with authentication
                 const response = await fetch(N8N_WEBHOOK_URL, {
                     method: 'POST',
                     headers: {
+                        'Authorization': `Basic ${credentials}`,
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(formData)

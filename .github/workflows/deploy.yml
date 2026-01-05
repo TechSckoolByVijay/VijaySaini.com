@@ -27,6 +27,17 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Inject n8n credentials from GitHub Secrets
+        run: |
+          # Create n8n config file from template with injected secrets
+          $content = Get-Content assets/js/n8n-config.template.js -Raw
+          $content = $content -replace '__N8N_WEBHOOK_URL__', '${{ vars.N8N_WEBHOOK_URL }}'
+          $content = $content -replace '__N8N_USERNAME__', '${{ vars.N8N_USERNAME }}'
+          $content = $content -replace '__N8N_PASSWORD__', '${{ secrets.N8N_PASSWORD }}'
+          $content | Set-Content assets/js/n8n-config.js
+          Write-Host "✅ n8n configuration injected successfully"
+        shell: pwsh
+
       - name: Build blog index
         run: |
           echo "Building blog index from markdown files..."

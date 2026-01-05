@@ -4,6 +4,9 @@ node_modules/
 # Build output
 public/data/blog-index.json
 
+# Generated config files (auto-generated during deployment)
+assets/js/n8n-config.js
+
 # OS files
 .DS_Store
 Thumbs.db
