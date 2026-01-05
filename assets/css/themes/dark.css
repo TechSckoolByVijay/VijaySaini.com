@@ -1,0 +1,40 @@
+/* ===================================
+   DARK THEME (DEFAULT)
+   =================================== */
+
+[data-theme="dark"] {
+    /* Color Palette - Dark Theme */
+    --bg-primary: #0f0f23;
+    --bg-secondary: #1a1a2e;
+    --bg-tertiary: #16213e;
+    --text-primary: #e4e4e7;
+    --text-secondary: #a1a1aa;
+    --accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --border-color: #27272a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+}
+
+[data-theme="dark"] .navbar {
+    background-color: rgba(26, 26, 46, 0.95);
+}
+
+[data-theme="dark"] .profile-placeholder,
+[data-theme="dark"] .profile-photo {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+[data-theme="dark"] .page-header {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+[data-theme="dark"] .timeline::before {
+    background-color: #27272a;
+}
+
+[data-theme="dark"] .timeline-marker {
+    border-color: #0f0f23;
+}

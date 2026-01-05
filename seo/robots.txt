@@ -1,0 +1,14 @@
+# robots.txt for Vijay Saini Portfolio
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://vijaysaini.com/seo/sitemap.xml
+
+# Disallow access to specific directories
+Disallow: /assets/
+Disallow: /data/
+
+# Crawl-delay (optional - adjust if needed)
+Crawl-delay: 10
