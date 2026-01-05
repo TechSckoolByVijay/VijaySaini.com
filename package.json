@@ -1,0 +1,25 @@
+{
+  "name": "vijaysaini-portfolio",
+  "version": "1.0.0",
+  "description": "Vijay Saini's professional portfolio and course platform",
+  "scripts": {
+    "build": "node scripts/build-blog-index.js",
+    "prebuild": "echo Building blog index...",
+    "postbuild": "echo Build completed successfully!",
+    "dev": "npm run build"
+  },
+  "keywords": [
+    "portfolio",
+    "blog",
+    "devops",
+    "azure",
+    "kubernetes"
+  ],
+  "author": "Vijay Saini <vijaysainiprofessional@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechSckoolByVijay/VijaySaini.com.git"
+  },
+  "devDependencies": {}
+}
