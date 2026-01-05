@@ -46,9 +46,74 @@
                     <p class="section-subtitle">Practical, hands-on courses covering PowerShell, Azure, Python, Kubernetes & more</p>
                 </div>
                 
-                <div class="projects-grid">
+                <div class="courses-layout">
+                    <!-- Filter Sidebar -->
+                    <aside class="filter-sidebar">
+                        <h3>Filter Courses</h3>
+                        
+                        <div class="filter-group">
+                            <h4>By Topic</h4>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" data-filter="all" checked>
+                                <span>All Courses (16)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" data-filter="powershell">
+                                <span>PowerShell (6)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" data-filter="azure">
+                                <span>Azure (5)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" data-filter="python">
+                                <span>Python (2)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" data-filter="kubernetes">
+                                <span>Kubernetes (1)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" data-filter="devops">
+                                <span>DevOps & CI/CD (2)</span>
+                            </label>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>By Rating</h4>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" data-rating="4.5">
+                                <span>4.5+ ⭐ (7)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" data-rating="4.0">
+                                <span>4.0+ ⭐ (16)</span>
+                            </label>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>By Duration</h4>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" data-duration="short">
+                                <span>Short (< 3 hours)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" data-duration="medium">
+                                <span>Medium (3-5 hours)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" data-duration="long">
+                                <span>Long (> 5 hours)</span>
+                            </label>
+                        </div>
+
+                        <button class="btn btn-secondary btn-small" id="resetFilters">Reset Filters</button>
+                    </aside>
+
+                    <!-- Courses Grid -->
+                    <div class="projects-grid">
                     <!-- Course 1 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="powershell" data-rating="4.4" data-duration="long">
                         <div class="project-header">
                             <h2>Advanced Scripting & Tool Making using Windows PowerShell</h2>
                             <span class="project-role">Advanced PowerShell & Tooling</span>
@@ -61,7 +126,7 @@
                     </div>
 
                     <!-- Course 2 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="powershell" data-rating="4.3" data-duration="medium">
                         <div class="project-header">
                             <h2>Learning Task Automation using Windows PowerShell</h2>
                             <span class="project-role">PowerShell Automation Basics</span>
@@ -74,7 +139,7 @@
                     </div>
 
                     <!-- Course 3 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="powershell" data-rating="4.4" data-duration="medium">
                         <div class="project-header">
                             <h2>Windows PowerShell Hands-On Training</h2>
                             <span class="project-role">PowerShell Fundamentals</span>
@@ -87,7 +152,7 @@
                     </div>
 
                     <!-- Course 4 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="powershell" data-rating="4.7" data-duration="medium">
                         <div class="project-header">
                             <h2>PowerShell for Automating Administration (Lab Based)</h2>
                             <span class="project-role">PowerShell Projects & Labs</span>
@@ -100,7 +165,7 @@
                     </div>
 
                     <!-- Course 5 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="powershell" data-rating="4.3" data-duration="medium">
                         <div class="project-header">
                             <h2>Active Directory Management using PowerShell</h2>
                             <span class="project-role">Active Directory Automation</span>
@@ -113,7 +178,7 @@
                     </div>
 
                     <!-- Course 6 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="powershell" data-rating="4.3" data-duration="short">
                         <div class="project-header">
                             <h2>Essential Tools for Windows System Administrators</h2>
                             <span class="project-role">Windows System Administration Tools</span>
@@ -126,7 +191,7 @@
                     </div>
 
                     <!-- Course 7 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="python" data-rating="4.5" data-duration="medium">
                         <div class="project-header">
                             <h2>Python Automation for Everyone</h2>
                             <span class="project-role">Python Fundamentals & Automation</span>
@@ -139,7 +204,7 @@
                     </div>
 
                     <!-- Course 8 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="python" data-rating="4.4" data-duration="long">
                         <div class="project-header">
                             <h2>GUI Automation using Python</h2>
                             <span class="project-role">Python GUI Automation (PyAutoGUI)</span>
@@ -152,7 +217,7 @@
                     </div>
 
                     <!-- Course 9 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="devops" data-rating="4.5" data-duration="short">
                         <div class="project-header">
                             <h2>ChatGPT for DevOps</h2>
                             <span class="project-role">AI for DevOps Productivity</span>
@@ -165,7 +230,7 @@
                     </div>
 
                     <!-- Course 10 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="kubernetes" data-rating="4.6" data-duration="short">
                         <div class="project-header">
                             <h2>Hands-On Kubernetes – Weekend Project Series</h2>
                             <span class="project-role">Kubernetes Practical Projects</span>
@@ -178,7 +243,7 @@
                     </div>
 
                     <!-- Course 11 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="devops" data-rating="4.4" data-duration="medium">
                         <div class="project-header">
                             <h2>Learning GitHub Actions for DevOps CI/CD</h2>
                             <span class="project-role">CI/CD with GitHub Actions</span>
@@ -191,7 +256,7 @@
                     </div>
 
                     <!-- Course 12 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="azure" data-rating="4.3" data-duration="long">
                         <div class="project-header">
                             <h2>Learning Microsoft Azure – A Hands-On Training</h2>
                             <span class="project-role">Azure Core Services</span>
@@ -204,7 +269,7 @@
                     </div>
 
                     <!-- Course 13 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="azure" data-rating="4.3" data-duration="long">
                         <div class="project-header">
                             <h2>AZ-900 Microsoft Azure Fundamentals – Quick Prep</h2>
                             <span class="project-role">Azure Certification (AZ-900)</span>
@@ -217,7 +282,7 @@
                     </div>
 
                     <!-- Course 14 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="azure" data-rating="4.3" data-duration="medium">
                         <div class="project-header">
                             <h2>Learning Azure Process Automation using PowerShell</h2>
                             <span class="project-role">Azure Automation & Runbooks</span>
@@ -230,7 +295,7 @@
                     </div>
 
                     <!-- Course 15 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="azure" data-rating="4.6" data-duration="medium">
                         <div class="project-header">
                             <h2>Learn Azure Serverless Functions in a Weekend</h2>
                             <span class="project-role">Azure Serverless Computing</span>
@@ -243,7 +308,7 @@
                     </div>
 
                     <!-- Course 16 -->
-                    <div class="project-card fade-in">
+                    <div class="project-card fade-in" data-topic="azure" data-rating="4.5" data-duration="medium">
                         <div class="project-header">
                             <h2>Microsoft Azure Storage – The Complete Guide</h2>
                             <span class="project-role">Azure Storage Administration</span>
@@ -254,6 +319,7 @@
                             <div class="stat-badge">📚 39 lectures</div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -272,5 +338,94 @@
 
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Course filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+            const courseCards = document.querySelectorAll('.project-card');
+            const resetButton = document.getElementById('resetFilters');
+            const allFilter = document.querySelector('[data-filter="all"]');
+
+            function filterCourses() {
+                const activeFilters = {
+                    topic: [],
+                    rating: [],
+                    duration: []
+                };
+
+                // Collect active filters
+                filterCheckboxes.forEach(checkbox => {
+                    if (checkbox.checked && checkbox.dataset.filter !== 'all') {
+                        if (checkbox.dataset.filter) {
+                            activeFilters.topic.push(checkbox.dataset.filter);
+                        } else if (checkbox.dataset.rating) {
+                            activeFilters.rating.push(parseFloat(checkbox.dataset.rating));
+                        } else if (checkbox.dataset.duration) {
+                            activeFilters.duration.push(checkbox.dataset.duration);
+                        }
+                    }
+                });
+
+                // If "All" is checked or no filters active, show all
+                const showAll = allFilter.checked || 
+                    (activeFilters.topic.length === 0 && 
+                     activeFilters.rating.length === 0 && 
+                     activeFilters.duration.length === 0);
+
+                courseCards.forEach(card => {
+                    if (showAll) {
+                        card.style.display = '';
+                        return;
+                    }
+
+                    const cardTopic = card.dataset.topic;
+                    const cardRating = parseFloat(card.dataset.rating);
+                    const cardDuration = card.dataset.duration;
+
+                    let matchesTopic = activeFilters.topic.length === 0 || activeFilters.topic.includes(cardTopic);
+                    let matchesRating = activeFilters.rating.length === 0 || activeFilters.rating.some(r => cardRating >= r);
+                    let matchesDuration = activeFilters.duration.length === 0 || activeFilters.duration.includes(cardDuration);
+
+                    if (matchesTopic && matchesRating && matchesDuration) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            // Handle "All" checkbox
+            allFilter.addEventListener('change', function() {
+                if (this.checked) {
+                    filterCheckboxes.forEach(cb => {
+                        if (cb !== allFilter) cb.checked = false;
+                    });
+                }
+                filterCourses();
+            });
+
+            // Handle other checkboxes
+            filterCheckboxes.forEach(checkbox => {
+                if (checkbox !== allFilter) {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            allFilter.checked = false;
+                        }
+                        filterCourses();
+                    });
+                }
+            });
+
+            // Reset filters
+            resetButton.addEventListener('click', function() {
+                filterCheckboxes.forEach(cb => cb.checked = false);
+                allFilter.checked = true;
+                filterCourses();
+            });
+
+            // Initial filter
+            filterCourses();
+        });
+    </script>
 </body>
 </html>

@@ -638,6 +638,90 @@ main {
     padding: var(--spacing-2xl) 0;
 }
 
+/* Courses layout with sidebar */
+.courses-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-xl);
+}
+
+/* Filter Sidebar */
+.filter-sidebar {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    height: fit-content;
+    position: sticky;
+    top: calc(var(--nav-height) + var(--spacing-lg));
+}
+
+.filter-sidebar h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--accent-color);
+}
+
+.filter-group {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-group:last-of-type {
+    border-bottom: none;
+}
+
+.filter-group h4 {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xs) 0;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-option:hover {
+    color: var(--accent-color);
+}
+
+.filter-checkbox {
+    margin-right: var(--spacing-sm);
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-color);
+}
+
+.filter-option span {
+    font-size: 0.95rem;
+    user-select: none;
+}
+
+#resetFilters {
+    width: 100%;
+    margin-top: var(--spacing-md);
+}
+
+/* Responsive filter sidebar */
+@media (max-width: 768px) {
+    .courses-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-sidebar {
+        position: static;
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
 .projects-grid {
     display: grid;
     gap: var(--spacing-xl);
@@ -682,6 +766,26 @@ main {
     font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: var(--spacing-lg);
+}
+
+/* Course stats badges */
+.course-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.stat-badge {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
 }
 
 .tech-stack,
