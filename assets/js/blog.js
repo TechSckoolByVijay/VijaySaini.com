@@ -7,13 +7,17 @@ async function loadBlogList() {
     const blogList = document.getElementById('blogList');
     
     try {
-        const response = await fetch('public/data/blog-index.json');
+        const response = await fetch('data/blogs.json');
         
         if (!response.ok) {
             throw new Error('Failed to load blog index');
         }
         
-        const blogs = await response.json();
+        const data = await response.json();
+        const blogs = data.blogs.filter(blog => blog.published);
+        
+        // Sort by date (newest first)
+        blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
         
         if (blogs.length === 0) {
             blogList.innerHTML = `
@@ -34,10 +38,10 @@ async function loadBlogList() {
                     </h2>
                     <div class="blog-card-meta">
                         <span class="blog-date">📅 ${formatDate(blog.date)}</span>
-                        <span class="blog-author">✍️ ${escapeHtml(blog.author)}</span>
+                        <span class="blog-read-time">⏱️ ${blog.readTime}</span>
                     </div>
                 </div>
-                <p class="blog-card-excerpt">${escapeHtml(blog.excerpt)}</p>
+                <p class="blog-card-excerpt">${escapeHtml(blog.description)}</p>
                 <div class="blog-card-footer">
                     <div class="blog-tags">
                         ${blog.tags.map(tag => `<span class="blog-tag">${escapeHtml(tag)}</span>`).join('')}

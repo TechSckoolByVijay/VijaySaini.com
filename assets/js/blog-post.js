@@ -32,38 +32,51 @@ async function loadBlogPost() {
     }
     
     try {
-        const response = await fetch('public/data/blog-index.json');
+        // Load blog metadata from JSON
+        const metaResponse = await fetch('data/blogs.json');
         
-        if (!response.ok) {
+        if (!metaResponse.ok) {
             throw new Error('Failed to load blog index');
         }
         
-        const blogs = await response.json();
-        const blog = blogs.find(b => b.slug === slug);
+        const data = await metaResponse.json();
+        const blog = data.blogs.find(b => b.slug === slug);
         
-        if (!blog) {
+        if (!blog || !blog.published) {
             showError('Blog post not found');
             return;
         }
         
+        // Load blog content from markdown file
+        const contentResponse = await fetch(`content/blogs/${blog.id}.md`);
+        
+        if (!contentResponse.ok) {
+            throw new Error('Failed to load blog content');
+        }
+        
+        let markdown = await contentResponse.text();
+        
+        // Remove frontmatter if present
+        markdown = markdown.replace(/^---[\s\S]*?---\n/, '');
+        
         // Update page title
-        document.getElementById('pageTitle').textContent = `${blog.title} - Vijay Saini`;
+        document.getElementById('pageTitle').textContent = `${blog.title} - Vijay`;
         
         // Update meta description
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.setAttribute('content', blog.excerpt);
+            metaDescription.setAttribute('content', blog.description);
         }
         
         // Render blog post
-        const htmlContent = marked.parse(blog.content);
+        const htmlContent = marked.parse(markdown);
         
         blogContent.innerHTML = `
             <header class="blog-post-header">
                 <h1 class="blog-post-title">${escapeHtml(blog.title)}</h1>
                 <div class="blog-post-meta">
                     <span class="blog-date">📅 ${formatDate(blog.date)}</span>
-                    <span class="blog-author">✍️ ${escapeHtml(blog.author)}</span>
+                    <span class="blog-read-time">⏱️ ${blog.readTime}</span>
                 </div>
                 <div class="blog-post-tags">
                     ${blog.tags.map(tag => `<span class="blog-tag">${escapeHtml(tag)}</span>`).join('')}
