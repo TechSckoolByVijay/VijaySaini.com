@@ -1,6 +1,19 @@
 {
   "blogs": [
     {
+      "id": "eliminate-secrets-genai-apps",
+      "title": "How I Eliminated 247 Secrets and Made My GenAI Apps Unhackable",
+      "slug": "eliminate-secrets-genai-apps",
+      "mdFile": "How-I-Eliminated-247-Secrets-and-Made-My-GenAI-Apps-Unhackable.md",
+      "description": "The zero-trust approach that made secret management obsolete. Learn how to build GenAI applications with zero API keys, no connection strings, and mathematically provable security using Azure Workload Identity.",
+      "author": "Vijay",
+      "date": "2026-01-20",
+      "tags": ["Security", "Azure", "GenAI", "Kubernetes", "Zero Trust", "Best Practices"],
+      "readTime": "12 min read",
+      "featured": true,
+      "published": true
+    },
+    {
       "id": "kubernetes-production-best-practices",
       "title": "Kubernetes Production Best Practices: Lessons from the Trenches",
       "slug": "kubernetes-production-best-practices",
