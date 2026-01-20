@@ -48,7 +48,7 @@ async function loadBlogPost() {
         }
         
         // Load blog content from markdown file
-        const contentResponse = await fetch(`content/blogs/${blog.id}.md`);
+        const contentResponse = await fetch(`content/blogs/${blog.mdFile}`);
         
         if (!contentResponse.ok) {
             throw new Error('Failed to load blog content');

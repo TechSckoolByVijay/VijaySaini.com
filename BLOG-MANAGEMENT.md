@@ -32,6 +32,7 @@ Your blog content here...
   "id": "my-new-blog-post",
   "title": "My Awesome Blog Post Title",
   "slug": "my-new-blog-post",
+  "mdFile": "my-new-blog-post.md",
   "description": "A brief description of your blog post that will appear in the listing and meta tags.",
   "author": "Vijay",
   "date": "2026-01-19",
@@ -44,9 +45,10 @@ Your blog content here...
 
 ### Field Descriptions:
 
-- **id**: Must match the markdown filename (without .md extension)
+- **id**: Unique identifier for the blog post
 - **title**: The display title shown on blog listing and post page
 - **slug**: URL-friendly identifier (use lowercase with hyphens)
+- **mdFile**: The markdown filename in `content/blogs/` directory (e.g., "my-blog.md")
 - **description**: Brief excerpt for listing page and SEO
 - **author**: Author name (typically "Vijay")
 - **date**: Publication date in YYYY-MM-DD format
@@ -98,6 +100,7 @@ Set `"published": false` in `data/blogs.json` - the blog will be hidden but not 
       "id": "blog-one",
       "title": "First Blog Post",
       "slug": "blog-one",
+      "mdFile": "my-first-blog.md",
       "description": "Description here",
       "author": "Vijay",
       "date": "2026-01-19",
@@ -110,6 +113,7 @@ Set `"published": false` in `data/blogs.json` - the blog will be hidden but not 
       "id": "blog-two",
       "title": "Second Blog Post",
       "slug": "blog-two",
+      "mdFile": "second-post.md",
       "description": "Description here",
       "author": "Vijay",
       "date": "2026-01-18",
@@ -124,7 +128,8 @@ Set `"published": false` in `data/blogs.json` - the blog will be hidden but not 
 
 ## Tips
 
-- Keep `id` and `slug` consistent and URL-friendly
+- The `mdFile` can be any filename - it doesn't need to match the `id` or `slug`
+- Keep `id` and `slug` unique and URL-friendly
 - Use descriptive titles and descriptions for better SEO
 - Add relevant tags for better categorization
 - Estimate read time: ~200 words per minute
