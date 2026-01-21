@@ -33,8 +33,8 @@
     <main>
         <section class="page-header">
             <div class="container">
-                <h1>Download Free Resources</h1>
-                <p>Get your comprehensive DevOps 2026 Curriculum Guide</p>
+                <h1>Free Learning Resources</h1>
+                <p id="resourcesSubtitle">Enter your email once to unlock all resources instantly</p>
             </div>
         </section>
 
@@ -42,37 +42,37 @@
             <div class="container">
                 <div class="download-grid">
                     <div class="download-info">
-                        <h2>📚 DevOps 2026 Curriculum</h2>
+                        <h2>📚 Unlock All Resources</h2>
                         <p class="download-description">
-                            Get the complete roadmap to master DevOps in 2026. This comprehensive guide includes:
+                            Get instant access to our complete library of DevOps, Azure, Kubernetes, and GenAI resources:
                         </p>
                         <ul class="download-features">
-                            <li>✅ Complete learning path from beginner to expert</li>
-                            <li>✅ Essential tools and technologies to master</li>
-                            <li>✅ Industry-demanded skills and certifications</li>
-                            <li>✅ Real-world project ideas and hands-on labs</li>
-                            <li>✅ Career progression and salary expectations</li>
-                            <li>✅ Interview preparation tips and questions</li>
+                            <li>✅ DevOps 2026 Curriculum (45-page guide)</li>
+                            <li>✅ Azure Services Cheat Sheet (Quick reference)</li>
+                            <li>✅ Kubernetes Commands Guide (Essential kubectl)</li>
+                            <li>✅ GenAI Playbook (RAG systems & AI agents)</li>
+                            <li>✅ Bonus: Interview Q&A compilation</li>
+                            <li>✅ Future resources automatically</li>
                         </ul>
                         <div class="download-stats">
                             <div class="stat-item">
-                                <strong>5,000+</strong>
+                                <strong>8,500+</strong>
                                 <span>Downloads</span>
                             </div>
                             <div class="stat-item">
-                                <strong>45 Pages</strong>
-                                <span>Content</span>
+                                <strong>4 Guides</strong>
+                                <span>Available Now</span>
                             </div>
                             <div class="stat-item">
-                                <strong>Free</strong>
-                                <span>Forever</span>
+                                <strong>100% Free</strong>
+                                <span>No Credit Card</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="download-form-container">
-                        <h3>Get Your Free Copy</h3>
-                        <p class="form-subtitle">Enter your details below and we'll send it to your inbox instantly</p>
+                        <h3>Get Instant Access</h3>
+                        <p class="form-subtitle">Enter your email to unlock all resources</p>
                         
                         <form id="downloadForm" class="download-form">
                             <div class="form-group">
@@ -100,8 +100,8 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-large btn-full" id="submitBtn">
-                                <span id="btnText">Send me the curriculum</span>
-                                <span id="btnLoader" class="btn-loader" style="display: none;">⏳ Sending...</span>
+                                <span id="btnText">🔓 Unlock All Resources</span>
+                                <span id="btnLoader" class="btn-loader" style="display: none;">⏳ Processing...</span>
                             </button>
 
                             <p class="form-note">
@@ -115,28 +115,50 @@
             </div>
         </section>
 
-        <section class="other-resources">
+        <section class="other-resources" id="resourcesSection">
             <div class="container">
-                <h2 class="section-title">More Free Resources</h2>
+                <h2 class="section-title">Your Resources</h2>
+                <p class="section-subtitle" id="resourcesSubtitle">Enter your email above to unlock these resources</p>
+                
                 <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📘</div>
+                        <h3>DevOps 2026 Curriculum</h3>
+                        <p>Complete 45-page roadmap for mastering DevOps</p>
+                        <button class="btn btn-outline btn-small download-btn" data-resource="devops-curriculum" disabled>
+                            🔒 Locked
+                        </button>
+                    </div>
                     <div class="resource-card">
                         <div class="resource-icon">☁️</div>
                         <h3>Azure Cheat Sheet</h3>
                         <p>Quick reference guide for Azure services and CLI commands</p>
-                        <a href="#" class="btn btn-outline btn-small">Coming Soon</a>
+                        <button class="btn btn-outline btn-small download-btn" data-resource="azure-cheat-sheet" disabled>
+                            🔒 Locked
+                        </button>
                     </div>
                     <div class="resource-card">
                         <div class="resource-icon">☸️</div>
                         <h3>Kubernetes Guide</h3>
                         <p>Essential kubectl commands and deployment patterns</p>
-                        <a href="#" class="btn btn-outline btn-small">Coming Soon</a>
+                        <button class="btn btn-outline btn-small download-btn" data-resource="kubernetes-guide" disabled>
+                            🔒 Locked
+                        </button>
                     </div>
                     <div class="resource-card">
                         <div class="resource-icon">🤖</div>
                         <h3>GenAI Playbook</h3>
                         <p>Building production RAG systems and AI agents</p>
-                        <a href="#" class="btn btn-outline btn-small">Coming Soon</a>
+                        <button class="btn btn-outline btn-small download-btn" data-resource="genai-playbook" disabled>
+                            🔒 Locked
+                        </button>
                     </div>
+                </div>
+
+                <div class="bulk-download" style="margin-top: 2rem; text-align: center; display: none;" id="bulkDownload">
+                    <button class="btn btn-primary btn-large" id="downloadAllBtn">
+                        📦 Download All Resources (ZIP)
+                    </button>
                 </div>
             </div>
         </section>
