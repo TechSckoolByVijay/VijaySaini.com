@@ -4,7 +4,7 @@
 
 ---
 
-**📺 [Watch the full 40-min masterclass here →](YOUR_YOUTUBE_CHANNEL_LINK)**
+**📺 [Watch the full 40-min masterclass here →](https://www.youtube.com/@TechSckool_Vijay)**
 
 ---
 
@@ -130,7 +130,7 @@ I spent two weeks figuring this out. So I built a production-ready RAG agent tem
 
 ---
 
-**📺 [Watch the full masterclass on YouTube →](YOUR_YOUTUBE_CHANNEL_LINK)**
+**📺 [Watch the full masterclass on YouTube →](https://www.youtube.com/@TechSckool_Vijay)**
 
 *(40 minutes that could save you from a $50M security incident)*
 
