@@ -19,6 +19,13 @@ When every team can generate more features in less time, the result isn't less o
 
 So the honest framing isn't "AI versus DevOps engineers." It's: don't compete with AI on syntax. Let it remove the boilerplate. Then bring the judgment around architecture, reliability, and scale that it still can't supply on its own.
 
+<div class="promo-box">
+  <span class="promo-icon">📘</span>
+  <h3>Prefer to read this as a guide?</h3>
+  <p>Grab the free companion e-book — <em>Unlocking the Future: Embracing GenAI in DevOps</em> — at no additional cost.</p>
+  <a href="https://www.readyforprod.cloud/products/digital_downloads/genai-era-devops" class="btn btn-outline" target="_blank" rel="noopener">📘 Get the free e-book</a>
+</div>
+
 ## Is this actually for you?
 
 DevOps is a genuinely powerful field, but it's not a fit for everyone, and it's worth being honest about that before you sink months into it.
@@ -47,6 +54,14 @@ Ignore the tool-of-the-month debates for a second. A beginner asks, "should I le
 
 The same logic applies to Linux, networking, containers, Kubernetes, and observability. Learn them as one connected system that explains why software behaves the way it does in production, not as a stack of separate certificates.
 
+<div class="promo-box">
+  <img src="assets/images/bundleimage.png" alt="AI-Enabled DevOps & SRE course bundle" class="promo-img">
+  <h3>Ready to go from reading to building?</h3>
+  <p>The AI-Enabled DevOps &amp; SRE bundle covers everything in this roadmap — PowerShell, Python, Azure, Terraform, GitHub Actions, Kubernetes, and GenAI automation — plus a community to work through it with.</p>
+  <p>Use code <span class="promo-code">launch_offer</span> at checkout for the best available discount.</p>
+  <a href="https://www.readyforprod.cloud/bundles/ai-enabled-devops-sre" class="btn btn-primary" target="_blank" rel="noopener">Enroll in the bundle →</a>
+</div>
+
 ## Where this is actually going
 
 The way I teach this end-to-end is through one real build: an asynchronous GenAI application — think a request that queues, workers that scale independently, secrets injected at runtime, and a dashboard that shows latency, failures, queue depth, and cost before a customer ever notices. It's deliberately not a toy example. It's the kind of project that gives you an actual answer when an interviewer asks "walk me through something you built," instead of "I completed a course."
@@ -55,11 +70,13 @@ Getting from "I understand the pieces" to "I can defend every decision in that a
 
 ---
 
-**Want the full 18-week roadmap and the capstone checklist?**
-
-It's part of the **AI-Enabled DevOps & SRE** bundle — the complete path from fundamentals to the GenAI platform project above, plus a community to work through it alongside other students.
-
-👉 [See the bundle](https://www.readyforprod.cloud/bundles/ai-enabled-devops-sre)
+<div class="promo-box">
+  <img src="assets/images/bundleimage.png" alt="AI-Enabled DevOps & SRE course bundle" class="promo-img">
+  <h3>Want the full 18-week roadmap and the capstone checklist?</h3>
+  <p>It's part of the AI-Enabled DevOps &amp; SRE bundle — the complete path from fundamentals to the GenAI platform project above, plus a community to work through it alongside other students.</p>
+  <p>Use code <span class="promo-code">launch_offer</span> at checkout for the best available discount.</p>
+  <a href="https://www.readyforprod.cloud/bundles/ai-enabled-devops-sre" class="btn btn-primary" target="_blank" rel="noopener">See the bundle →</a>
+</div>
 
 ---
 

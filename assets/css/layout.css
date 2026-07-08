@@ -1867,6 +1867,57 @@ main {
     border-color: var(--accent-color);
 }
 
+.blog-post-content .promo-box {
+    text-align: center;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.blog-post-content .promo-box h3 {
+    margin-top: 0;
+    color: var(--text-primary);
+}
+
+.blog-post-content .promo-box p {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.promo-icon {
+    font-size: 2.75rem;
+    line-height: 1;
+    margin-bottom: var(--spacing-sm);
+    display: inline-block;
+}
+
+.blog-post-content .promo-img {
+    max-width: 420px;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    margin: 0 auto var(--spacing-md);
+}
+
+.promo-code {
+    display: inline-block;
+    background-color: var(--bg-tertiary);
+    color: var(--accent-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    margin: 0 0.2rem;
+}
+
+.blog-post-content .promo-box .btn {
+    text-decoration: none;
+    margin-top: var(--spacing-sm);
+}
+
 .blog-post-footer {
     margin-top: var(--spacing-2xl);
     padding-top: var(--spacing-xl);
