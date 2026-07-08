@@ -1913,9 +1913,22 @@ main {
     margin: 0 0.2rem;
 }
 
-.blog-post-content .promo-box .btn {
+.blog-post-content .promo-box a.btn {
     text-decoration: none;
     margin-top: var(--spacing-sm);
+}
+
+.blog-post-content .promo-box a.btn-primary,
+.blog-post-content .promo-box a.btn-primary:hover {
+    color: #ffffff;
+}
+
+.blog-post-content .promo-box a.btn-outline {
+    color: var(--accent-color);
+}
+
+.blog-post-content .promo-box a.btn-outline:hover {
+    color: #ffffff;
 }
 
 .blog-post-footer {
