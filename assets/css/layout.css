@@ -788,6 +788,10 @@ main {
     gap: 0.25rem;
 }
 
+.course-cta {
+    margin-top: var(--spacing-lg);
+}
+
 .tech-stack,
 .project-highlights {
     margin-top: var(--spacing-lg);
