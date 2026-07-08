@@ -1,6 +1,19 @@
 {
   "blogs": [
     {
+      "id": "genai-devops-playbook",
+      "title": "GenAI Didn't Kill DevOps. It Made the Platform Problem Bigger.",
+      "slug": "genai-devops-playbook",
+      "mdFile": "genai-devops-playbook.md",
+      "description": "AI can generate the Dockerfile. It can't decide the architecture. Why DevOps gets more valuable, not less, as GenAI reshapes software delivery — and who this career path is actually for.",
+      "author": "Vijay",
+      "date": "2026-07-08",
+      "tags": ["GenAI", "DevOps", "Career", "Kubernetes", "Platform Engineering"],
+      "readTime": "7 min read",
+      "featured": true,
+      "published": true
+    },
+    {
       "id": "eliminate-secrets-genai-apps",
       "title": "How I Eliminated 247 Secrets and Made My GenAI Apps Unhackable",
       "slug": "eliminate-secrets-genai-apps",
