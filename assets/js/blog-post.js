@@ -87,6 +87,9 @@ async function loadBlogPost() {
             </div>
         `;
         
+        // Render Mermaid diagrams (must run before highlighting/copy buttons)
+        await renderMermaidDiagrams();
+
         // Highlight code blocks
         document.querySelectorAll('pre code').forEach((block) => {
             hljs.highlightElement(block);
@@ -98,6 +101,29 @@ async function loadBlogPost() {
     } catch (error) {
         console.error('Error loading blog post:', error);
         showError('Unable to load blog post. Please try again later.');
+    }
+}
+
+async function renderMermaidDiagrams() {
+    const blocks = document.querySelectorAll('pre code.language-mermaid');
+    if (blocks.length === 0 || typeof mermaid === 'undefined') {
+        return;
+    }
+
+    blocks.forEach((block) => {
+        const diagram = document.createElement('div');
+        diagram.className = 'mermaid';
+        diagram.textContent = block.textContent;
+        block.parentElement.replaceWith(diagram);
+    });
+
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    mermaid.initialize({ startOnLoad: false, theme: isDark ? 'dark' : 'default' });
+
+    try {
+        await mermaid.run({ querySelector: '.blog-post-content .mermaid' });
+    } catch (err) {
+        console.error('Mermaid render error:', err);
     }
 }
 
