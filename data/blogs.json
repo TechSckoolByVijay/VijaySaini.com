@@ -1,6 +1,19 @@
 {
   "blogs": [
     {
+      "id": "harness-engineering-enterprise-ai-agents",
+      "title": "Harness Engineering: The Control Layer That Makes Enterprise AI Agents Actually Work",
+      "slug": "harness-engineering-enterprise-ai-agents",
+      "mdFile": "harness-engineering-enterprise-ai-agents.md",
+      "description": "An LLM is a powerful horse, but power isn't reliability. What I learned building a harness of MCP tools, skills, rules, workspaces, multi-agent flows and observability that turns AI agents into governed, composable enterprise systems.",
+      "author": "Vijay",
+      "date": "2026-09-29",
+      "tags": ["Harness Engineering", "AI Agents", "Multi-Agent Systems", "MCP", "Agent Orchestration", "AI Observability", "Enterprise GenAI"],
+      "readTime": "15 min read",
+      "featured": true,
+      "published": true
+    },
+    {
       "id": "genai-devops-playbook",
       "title": "GenAI Didn't Kill DevOps. It Made the Platform Problem Bigger.",
       "slug": "genai-devops-playbook",
