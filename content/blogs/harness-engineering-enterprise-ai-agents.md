@@ -21,6 +21,13 @@ When I started building enterprise AI agents, this was the analogy I kept coming
 
 The engineering work that turned our agents from impressive demos into something teams could actually depend on was not about finding a better horse. It was about building everything around it. I've started calling that work **Harness Engineering**.
 
+<div class="promo-box">
+  <span class="promo-icon">🎓</span>
+  <h3>Want to build production-grade AI and DevOps systems yourself?</h3>
+  <p>At <strong>ReadyForProd.cloud</strong> I teach DevOps and GenAI the way it's actually used in production — from ChatGPT-assisted DevOps and n8n workflow automation to Kubernetes, Terraform and CI/CD. Hands-on, project-first, no toy examples.</p>
+  <a href="https://www.readyforprod.cloud/" class="btn btn-primary" target="_blank" rel="noopener">Explore the courses →</a>
+</div>
+
 ## What Is Harness Engineering?
 
 Let me be clear up front: this is not a formally standardized term with an agreed definition. It is my practical interpretation, based on building an agent platform for enterprise workflows.
@@ -183,13 +190,6 @@ This is what makes the whole thing reusable. For example:
 All three draw on the same underlying platform capabilities, just composed differently.
 
 There's a second, equally important property: **end users can create their own skills and onboard them into an agent** where appropriate. That was a deliberate decision. A platform where only the platform team can create capabilities quickly becomes a bottleneck — every new use case turns into a ticket in someone else's backlog. The goal is the opposite: a system where the teams closest to the problem can progressively build and share their own agent capabilities, on top of common infrastructure and governance.
-
-<div class="promo-box">
-  <span class="promo-icon">🎓</span>
-  <h3>Want to build this kind of system yourself?</h3>
-  <p>At <strong>ReadyForProd.cloud</strong> I teach DevOps and GenAI the way it's actually used in production — from ChatGPT-assisted DevOps and n8n workflow automation to Kubernetes, Terraform and CI/CD. Hands-on, project-first, no toy examples.</p>
-  <a href="https://www.readyforprod.cloud/" class="btn btn-primary" target="_blank" rel="noopener">Explore the courses →</a>
-</div>
 
 ## From a Single Agent to Composable Workflows
 
