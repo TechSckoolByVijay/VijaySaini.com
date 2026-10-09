@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (error) {
                 console.error('Error submitting form:', error);
                 showMessage(
-                    '❌ Oops! Something went wrong. Please try again or contact us directly at vijaysainiprofessional@gmail.com',
+                    '❌ Oops! Something went wrong. Please try again or contact us directly at dev.with.vijay@gmail.com',
                     'error'
                 );
             } finally {

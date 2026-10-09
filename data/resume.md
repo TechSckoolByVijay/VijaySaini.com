@@ -5,7 +5,7 @@
 
 **Generative AI Specialist & Cloud Architect (Azure, DevOps, Microservices)**
 Bengaluru, India
-**Email:** [vijaysainiprofessional@gmail.com](mailto:vijaysainiprofessional@gmail.com)
+**Email:** [dev.with.vijay@gmail.com](mailto:dev.with.vijay@gmail.com)
 **Phone:** 97844 04866
 **LinkedIn:** linkedin.com/in/vijay-saini-10759a8b
 **StackOverflow:** stackoverflow.com/users/5881105/vijay

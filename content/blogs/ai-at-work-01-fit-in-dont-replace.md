@@ -14,7 +14,7 @@ tags: AI at Work, Enterprise GenAI, AI Strategy, AI Agents, DevOps
   <h3>The short version</h3>
   <p>Plenty of enterprise AI agents and RAG bots get built, launched, and then hardly used. A good product doesn't earn adoption on its own; <b>you have to drive it.</b> This week an AI agent took over about <b>80%</b> of a team's manual test-fixing work, because it <b>fitted into a decades-old process instead of replacing it.</b></p>
   <p><i>Written from my day job as a generative AI cloud architect, not from a slide deck.</i></p>
-  <p>Want to talk about doing this in your team? <b>Write to me: <a href="mailto:vijaysainiprofessional@gmail.com?subject=AI%20at%20Work">vijaysainiprofessional@gmail.com</a></b>. I read every email.</p>
+  <p>Want to talk about doing this in your team? <b>Write to me: <a href="mailto:dev.with.vijay@gmail.com?subject=AI%20at%20Work">dev.with.vijay@gmail.com</a></b>. I read every email.</p>
 </div>
 
 ## Where this comes from
@@ -134,11 +134,11 @@ If you can't answer all four, you have a demo, not a solution.
 
 Every week I'm solving another real business problem with AI, and I'll share what worked, what didn't, and what I learned. That's *AI at Work*.
 
-If this matches what you're seeing in your company, or completely contradicts it, **I'd like to hear from you: [vijaysainiprofessional@gmail.com](mailto:vijaysainiprofessional@gmail.com?subject=AI%20at%20Work).**
+If this matches what you're seeing in your company, or completely contradicts it, **I'd like to hear from you: [dev.with.vijay@gmail.com](mailto:dev.with.vijay@gmail.com?subject=AI%20at%20Work).**
 
 <div class="promo-box">
   <span class="promo-icon">🧭</span>
   <h3>Building the skills for this kind of work?</h3>
-  <p>My free DevOps 2026 Curriculum and GenAI Playbook cover the path from cloud and CI/CD to Kubernetes and AI agents that work inside real pipelines.</p>
-  <a href="download.html" class="btn btn-outline">🧭 Get the free guides</a>
+  <p>My free DevOps 2026 Curriculum and GenAI Playbook cover the path from cloud and CI/CD to Kubernetes and AI agents that work inside real pipelines. Write to me and I'll send them to you personally.</p>
+  <a href="download.html" class="btn btn-outline">🧭 Email me for the free guides</a>
 </div>
