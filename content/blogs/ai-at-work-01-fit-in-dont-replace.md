@@ -1,106 +1,82 @@
 ---
-title: "AI Took Over 80% of Our Test-Fixing Work. Not by Replacing QA, but by Fitting Into It."
+title: "AI Won't Replace How Your Company Works. The Teams Winning With AI Aren't Even Trying To."
 date: 2026-10-10
 author: Vijay Saini
-tags: AI at Work, AI Agents, Test Automation, Playwright, Enterprise GenAI
+tags: AI at Work, Enterprise GenAI, AI Strategy, AI Agents, DevOps
 ---
 
-# AI Took Over 80% of Our Test-Fixing Work. Not by Replacing QA, but by Fitting Into It.
+# AI Won't Replace How Your Company Works. The Teams Winning With AI Aren't Even Trying To.
 
-*AI at Work, Week 1: real enterprise problems I solve with AI each week. No demos, no hype.*
+*AI at Work, Week 1: what I actually learn solving enterprise problems with AI each week. No demos, no hype.*
 
 <div class="promo-box">
-  <span class="promo-icon">⚡</span>
-  <h3>The 30-second version</h3>
-  <p><b>Problem:</b> customer-specific changes kept breaking our automated UI tests, and QA engineers spent their days fixing them by hand.<br>
-  <b>What I built:</b> an AI agent that reads the failure, finds the broken test in the repo, fixes it, opens a PR, and re-runs the tests until they pass.<br>
-  <b>Result:</b> about <b>80%</b> of the fixes that used to need a QA engineer are now handled by the agent.</p>
-  <p>Want the details I left out of this post, or want to try this in your own team? <b>Email me: <a href="mailto:vijaysainiprofessional@gmail.com?subject=AI%20at%20Work%20%E2%80%94%20self-healing%20tests">vijaysainiprofessional@gmail.com</a></b>. I read every one.</p>
+  <span class="promo-icon">💡</span>
+  <h3>The short version</h3>
+  <p>Everyone says AI will replace every process and every way of working. In the enterprise, that isn't what's happening. This week an AI agent took over about <b>80%</b> of our manual test-fixing work, and it did that by <b>fitting into a process that's decades old, not replacing it.</b></p>
+  <p>Want to talk about doing this in your team? <b>Write to me: <a href="mailto:vijaysainiprofessional@gmail.com?subject=AI%20at%20Work">vijaysainiprofessional@gmail.com</a></b>. I read every email.</p>
 </div>
 
-Everyone is talking about RAG, agents and agentic RAG. Here's my honest opinion: **none of it matters if it doesn't solve a problem someone at work actually has.** You can explain agentic RAG all day and still not remove a single hour of real work.
+## The buzz vs. what I see at work
 
-So this series is the opposite. Each week, one problem from an enterprise, how AI fixed it, and what I learned.
+Open LinkedIn and you'd think every company will be run by agents by next quarter. RAG, agentic RAG, multi-agent systems, autonomous everything.
 
-## The problem: the test suite that never stayed green
+I'm a generative AI architect. I build these systems for a living. And here's my honest view:
 
-We work with a large enterprise **warehouse management system (WMS)**: many applications, many screens, many APIs.
+**Knowing the buzzwords solves nothing.** You can talk about agentic RAG all day and not remove a single hour of real work from anyone's week. The value starts when AI is aimed at a real problem someone has, *inside the way they already work.*
 
-The product team maintains an automated **Playwright** test suite for the **core** product. That part is fine.
+## The story behind this week's lesson
 
-The trouble is **customers**. Each customer customises the product:
-- one adds a new screen
-- another adds a new report
-- another adds new widgets or a new mandatory field on a form
+We have a large enterprise application: many screens, many APIs. Customers customise it: a new screen here, a new report there, a new mandatory field on a form. Each customisation breaks some automated tests, and QA engineers spent their days working out why and fixing them by hand. Fix one, re-run, watch it fail somewhere else.
 
-The product team doesn't write tests for each customer's version, and it can't. So a separate test team takes the core suite and adapts it for every customer.
+The obvious "AI" answer would have been: *replace the test process with an autonomous agent.* We didn't.
 
-Here's what their week looked like:
+Instead, I sat down with a QA engineer, because I knew AI and they knew QA, and neither of us could solve this alone. We captured how *they* diagnose a failure and turned it into an AI skill. Now when the existing pipeline fails, an agent:
+- reads the same logs and screenshots the engineer would
+- fixes the test in the same repository
+- raises a pull request through the same review process
+- re-runs the tests until they pass
 
-1. The pipeline runs the tests and they **fail**, because a customisation changed something.
-2. A QA engineer opens the **logs and screenshots** to work out why.
-3. They fix the test script and run it again.
-4. **It fails on a different screen.** Back to step 2.
+A human still approves every change.
 
-That's repetitive, skilled, manual work, and it never ends, because customers keep customising.
+The pipeline didn't change. The review process didn't change. Nobody learned a new tool. And about 80% of the cases that used to need a QA engineer now don't.
 
-## Nobody had both halves of the knowledge
+## What I'd tell anyone starting an AI project at work
 
-I understand AI. I didn't understand QA. The QA engineers understood QA deeply, but not AI.
+**1. Processes are decades of lessons. Respect them.**
+That approval step that looks slow? It's there because something went badly wrong once. When you try to sweep processes away with AI, you're also throwing away the reasons they exist, and people sense that and resist.
 
-So I didn't start by writing code. **I sat with a QA engineer and watched how they fix a failing test.** What do they look at first? How do they tell *"the app changed"* from *"the test is wrong"*? Where in the repo do they go? What does a good fix look like?
+**2. Don't replace the workflow. Find the slowest step and fit in there.**
+The best AI projects I've seen don't redesign anything. They find one painful, repetitive step that people already hate, and take it over quietly. Small surface, big relief.
 
-Then I turned that know-how into an **AI skill**, in the sense Anthropic uses the word: a packaged set of instructions and steps the agent loads when it needs them. It's not a human skill. Basically, the QA engineer's troubleshooting playbook, written down so an agent can follow it.
+**3. Hand the work back through doors people already trust.**
+Our agent doesn't ask anyone to trust a black box. It opens a pull request like any colleague would. Adoption beats capability: an average agent that people use beats a brilliant one nobody trusts.
 
-## What the agent does
+**4. Pair the AI person with the domain expert.**
+I didn't understand QA. The QA engineer didn't understand AI. Every useful thing in this project came from the hours we spent together, not from the model.
 
-When the pipeline reports a failure, the agent:
+**5. Don't rush. Things will settle.**
+Enterprise ways of working evolved over decades, and they won't be replaced overnight. A three-person startup can rebuild everything around AI. A large enterprise can't, and shouldn't try. The teams getting real results are patient: one fitted-in improvement at a time.
 
-1. **Reads the evidence the pipeline already produces:** the error log and the screenshots.
-   *Example: the log says a value is missing for a field that's now mandatory, because this customer added a new required element to the form.*
-2. **Clones the latest code** and goes through the test repository the way a developer would.
-3. **Matches the failure to a known pattern** from the skill, and finds the exact test file and step responsible.
-4. **Makes the fix**, for example supplying a valid value for the new mandatory field.
-5. **Pushes to a feature branch and opens a pull request.** It never touches the main branch.
-6. **Runs the tests again.** If the same scenario still fails, it goes back to step 1 with the new evidence.
-7. When the tests pass, it **notifies the team**: *"Here's what failed, here's what I changed, the tests are green. Please review and merge."*
+## Four questions before your next AI idea
 
-A human still merges every change.
+Before building anything, ask:
 
-## The result
+1. **Which exact step in today's process is slow, repetitive and disliked?**
+2. **Who does that step today, and have I watched them do it?**
+3. **How will the AI's output re-enter the existing process?** (A ticket, a PR, an email, a report people already read.)
+4. **Who still approves the result?**
 
-About **80%** of the cases that used to need a QA engineer to investigate and fix are now handled by the agent, from one customer's version to the next. The QA engineers spend their time on the 20% that need judgement: new screens and real product questions.
+If you can't answer all four, you have a demo, not a solution.
 
-## The lesson: respect the process
+## Next week
 
-This is the part I want you to remember, more than any of the technology.
+Every week I'm solving another real business problem with AI, and I'll share what worked, what didn't, and what I learned. That's *AI at Work*.
 
-**You can't change everything, even with very capable AI.** The pipeline, the logs, the screenshots, the pull-request review: those processes were built over years for good reasons, and the team trusts them.
-
-So the agent doesn't replace any of them. It **fits in**:
-- It reads the logs the pipeline already writes.
-- It works in the same repository.
-- It hands its work back through the same PR review a human would use.
-
-Nobody had to learn a new tool, and nobody had to trust a black box. That's why it was adopted.
-
-The temptation with AI is to redesign the whole workflow around your agent. Resist it, at least for now. **Find the slowest, most repetitive step in an existing process, and fit AI exactly there.**
-
-## What I left out
-
-There's a lot more to this than fits in one post:
-- how the skill is structured
-- which failures the agent should *not* try to fix
-- how it knows when to stop retrying and hand over to a human
-- what went wrong in the first versions
-
-If you're working on something similar, or you're a QA or DevOps engineer wondering what this would look like in your team, **write to me at [vijaysainiprofessional@gmail.com](mailto:vijaysainiprofessional@gmail.com?subject=AI%20at%20Work%20%E2%80%94%20self-healing%20tests).** I'm happy to go deeper.
-
-Next week in *AI at Work*: another real problem, and how it got solved.
+If this matches what you're seeing in your company, or completely contradicts it, **I'd like to hear from you: [vijaysainiprofessional@gmail.com](mailto:vijaysainiprofessional@gmail.com?subject=AI%20at%20Work).**
 
 <div class="promo-box">
   <span class="promo-icon">🧭</span>
-  <h3>Building your own skills for this kind of work?</h3>
-  <p>My free DevOps 2026 Curriculum and GenAI Playbook cover the path: cloud, CI/CD, Kubernetes, then AI agents that work inside real pipelines.</p>
+  <h3>Building the skills for this kind of work?</h3>
+  <p>My free DevOps 2026 Curriculum and GenAI Playbook cover the path from cloud and CI/CD to Kubernetes and AI agents that work inside real pipelines.</p>
   <a href="download.html" class="btn btn-outline">🧭 Get the free guides</a>
 </div>
