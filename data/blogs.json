@@ -2,10 +2,10 @@
   "blogs": [
     {
       "id": "ai-at-work-01-fit-in-dont-replace",
-      "title": "AI Won't Replace How Your Company Works. The Teams Winning With AI Aren't Even Trying To.",
+      "title": "Most Enterprise AI Agents Get Zero Users. Here's What Made Ours Stick.",
       "slug": "ai-at-work-01-fit-in-dont-replace",
       "mdFile": "ai-at-work-01-fit-in-dont-replace.md",
-      "description": "AI at Work, Week 1. Everyone says AI will replace every process. In the enterprise, the wins come from fitting AI into decades-old workflows. A real example where an AI agent took over about 80% of manual test-fixing, and five lessons from it.",
+      "description": "AI at Work, Week 1, from my day job as a generative AI cloud architect. Enterprise AI agents rarely fail on technology; they fail on adoption. How an agent took over about 80% of a team's manual test-fixing by fitting into a decades-old process, and five lessons you won't hear on LinkedIn.",
       "author": "Vijay",
       "date": "2026-10-10",
       "tags": ["AI at Work", "Enterprise GenAI", "AI Strategy", "AI Agents", "DevOps"],
