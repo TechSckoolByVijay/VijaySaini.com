@@ -1,6 +1,19 @@
 {
   "blogs": [
     {
+      "id": "powershell-scripts-ai-agent-tools",
+      "title": "Your PowerShell Scripts Are About to Become AI Agent Tools. Here's How to Make Them Ready.",
+      "slug": "powershell-scripts-ai-agent-tools",
+      "mdFile": "powershell-scripts-ai-agent-tools.md",
+      "description": "AI agents don't replace your admin scripts. They call them. How to turn everyday PowerShell into safe, agent-ready tools with comment-based help, validation, -WhatIf, structured output and JEA.",
+      "author": "Vijay",
+      "date": "2026-10-09",
+      "tags": ["PowerShell", "AI Agents", "Automation", "DevOps", "GenAI"],
+      "readTime": "8 min read",
+      "featured": true,
+      "published": true
+    },
+    {
       "id": "harness-engineering-enterprise-ai-agents",
       "title": "Harness Engineering: The Control Layer That Makes Enterprise AI Agents Actually Work",
       "slug": "harness-engineering-enterprise-ai-agents",
