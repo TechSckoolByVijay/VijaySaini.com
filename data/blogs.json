@@ -1,6 +1,19 @@
 {
   "blogs": [
     {
+      "id": "ai-at-work-01-self-healing-test-cases",
+      "title": "AI Took Over 80% of Our Test-Fixing Work. Not by Replacing QA, but by Fitting Into It.",
+      "slug": "ai-at-work-01-self-healing-test-cases",
+      "mdFile": "ai-at-work-01-self-healing-test-cases.md",
+      "description": "AI at Work, Week 1. Customer customisations kept breaking our Playwright suites. An AI agent built from a QA engineer's playbook now fixes the tests, opens the PR and re-runs until green, handling about 80% of the manual fixes.",
+      "author": "Vijay",
+      "date": "2026-10-10",
+      "tags": ["AI at Work", "AI Agents", "Test Automation", "Playwright", "Enterprise GenAI"],
+      "readTime": "5 min read",
+      "featured": true,
+      "published": true
+    },
+    {
       "id": "powershell-scripts-ai-agent-tools",
       "title": "Your PowerShell Scripts Are About to Become AI Agent Tools. Here's How to Make Them Ready.",
       "slug": "powershell-scripts-ai-agent-tools",
