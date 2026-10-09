@@ -45,6 +45,57 @@ Instead, I sat down with a QA engineer, because I knew AI and they knew QA, and 
 
 A human still approves every change.
 
+### How it fits together: the harness
+
+The agent isn't a standalone bot. It runs inside our **harness**, the control layer I wrote about in [Harness Engineering](blog-post.html?slug=harness-engineering-enterprise-ai-agents). For this problem we didn't build a new system. We added one **skill** to the harness, and the harness's **orchestrator**, **tools** and **rules** did the rest.
+
+Look at both ends of the diagram: the existing pipeline and the existing PR review are untouched.
+
+```mermaid
+flowchart LR
+    P["Existing test pipeline<br/>(unchanged)"] -- "tests fail:<br/>logs + screenshots" --> O
+    subgraph H["Harness"]
+        O["Orchestrator"]
+        S["Skill:<br/>the QA engineer's playbook"]
+        T["Tools:<br/>clone repo · edit code · run tests · open PR · notify"]
+        R["Rules:<br/>never touch main · feature branch only<br/>never delete branches · a human merges"]
+        O --> S
+        O --> T
+        R -. governs .-> O
+    end
+    T -- "pull request" --> V["Existing PR review<br/>(unchanged)"]
+    V -- "human approves" --> M["Merge"]
+```
+
+- **The orchestrator** receives the failure and decides what to do next.
+- **The tools** do the hands-on work a developer would: clone the repository, edit code, run the tests, open the pull request, notify the team.
+- **The rules** are the guardrails, and they aren't negotiable: never commit to the main branch, only work on a feature branch, never delete branches, and a human always merges. The agent is powerful, so its limits are written down, not assumed.
+
+### A little more about the skill
+
+In AI terms, a **skill** (a concept Anthropic popularised) is a packaged set of instructions the agent loads only when the task needs it. Ours is basically **the QA engineer's experience, written down**:
+- how to read a failure log and a screenshot
+- which failure patterns we've seen before, and what the right fix is for each
+- how the test code is organised, and where a fix belongs
+- what "done" means: the tests are green again
+
+Here's the loop the skill runs:
+
+```mermaid
+flowchart TD
+    A["Read failure logs<br/>and screenshots"] --> B{"Matches a known<br/>failure pattern?"}
+    B -- "No" --> Q["Leave it for a<br/>QA engineer"]
+    B -- "Yes" --> C["Clone latest code,<br/>find the failing test"]
+    C --> D["Apply the fix<br/>e.g. a value for a new mandatory field"]
+    D --> E["Push to a feature branch,<br/>open a PR"]
+    E --> F["Re-run the tests"]
+    F --> G{"Passing?"}
+    G -- "No" --> A
+    G -- "Yes" --> N["Notify the team:<br/>ready to review and merge"]
+```
+
+Notice the **"No"** on the left. The skill doesn't try to fix everything. Failures it doesn't recognise go to a person, exactly as before. That's a big part of why the team trusts it.
+
 The pipeline didn't change. The review process didn't change. Nobody learned a new tool. And about 80% of the cases that used to need a QA engineer now don't.
 
 ## What I'd tell anyone starting an AI project at work
