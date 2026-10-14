@@ -1,6 +1,19 @@
 {
   "blogs": [
     {
+      "id": "75-days-explore-first",
+      "title": "75 Days Left This Year: Explore First, Specialise Later",
+      "slug": "75-days-explore-first",
+      "mdFile": "75-days-explore-first.md",
+      "description": "A calm, 30-minutes-a-day plan for sysadmins, IT support and manual QA moving toward cloud, SRE, platform or DevOps work. Two lessons you can use today (six tools, six questions; idempotency), the 11-week map, honest levels, and Week 0 setup.",
+      "author": "Vijay",
+      "date": "2026-10-14",
+      "tags": ["Career", "DevOps", "Kubernetes", "Cloud", "SRE", "Learning Plan"],
+      "readTime": "7 min read",
+      "featured": true,
+      "published": true
+    },
+    {
       "id": "ai-at-work-01-fit-in-dont-replace",
       "title": "Most Enterprise AI Agents Get Zero Users. Here's What Made Ours Stick.",
       "slug": "ai-at-work-01-fit-in-dont-replace",
